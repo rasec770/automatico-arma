@@ -1,0 +1,2 @@
+# Arma Automatica
+Este repositório contém o código fonte do projeto de um sistema de controle de um braço robótico de 3 graus de liberdade. O projeto foi desenvolvido para a disciplina de Sistemas Embarcados do curso de Engenharia de Computação da Universidade Federal de Itajubá.

@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2024-10-20
+  Major Features:
+    - Initial release.
+  Features:
+    - Empesando a crear la automatizacion si.
