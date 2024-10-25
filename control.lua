@@ -58,6 +58,12 @@ script.on_event(defines.events.on_tick, update_player_movement)
 commands.add_command("teleport", "Teletransporta al jugador a una posición específica.", function(command)
     local player = game.get_player(command.player_index)
     local params = {}
+
+    if not command.parameter then
+        player.print("Uso incorrecto del comando. Uso correcto: /teleport <x> <y>")
+        return
+    end
+
     for param in string.gmatch(command.parameter, "%S+") do
         table.insert(params, param)
     end
