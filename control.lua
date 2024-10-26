@@ -168,3 +168,24 @@ end)
 
 -- Ejemplo como ejecutar el comando mine:
 -- /mine 100
+
+
+commands.add_command("brutal_mine", "Mina la entidad más cercana dentro de un radio específico una cierta cantidad de veces.", function(command)
+    local player = game.get_player(command.player_index)
+    local radius = 2 -- Radio de búsqueda en tiles
+    local times = tonumber(command.parameter) or 1 -- Cantidad de veces a minar, por defecto 1
+
+    for i = 1, times do
+        local entity = find_nearest_entity(player, radius)
+
+        if entity then
+            mine_entity(player, entity)
+        else
+            player.print("No hay ninguna entidad cercana para minar.")
+            break
+        end
+    end
+end)
+
+-- Ejemplo como ejecutar el comando brutal_mine:
+-- /brutal_mine 100
